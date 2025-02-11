@@ -1,12 +1,12 @@
 a:link{
-    color:black;
+    color:white;
   }
-  a:visited{
+a:visited{
     color:pink;
   }
-  p{
+p{
     font-family: Courier New;font-size: larger; color:azure
   }
-  body{
+body{
     background-color: #DC143C;
   }
