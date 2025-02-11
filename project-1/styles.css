@@ -7,3 +7,6 @@ a:link{
   p{
     font-family: Courier New;font-size: larger;
   }
+  body{
+    background-color: #DC143C;
+  }
