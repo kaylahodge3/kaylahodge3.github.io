@@ -1,6 +1,8 @@
 @font-face {
   font-family: "custom-font";
   src: url("Pally_Complete");
+  font-weight: normal;
+  font-style: normal
 }
 
 a:link{
