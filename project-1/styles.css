@@ -1,7 +1,11 @@
 @font-face {
   font-family: "custom-font";
   src: url("Pally-Regular.otf"); format("otf")
-  font-size:500px;
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  font-size: large;
 }
 
 a:link{
