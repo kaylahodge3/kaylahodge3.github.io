@@ -19,7 +19,7 @@ a:link{
     color:white;
   }
 a:visited{
-    color:pink;
+    color:white;
   }
 p{
     color:azure
@@ -53,18 +53,5 @@ body{
   bottom:10px;
   right:10px;
 }
-.fixed-btn{
-  background-color:pink;
-  width:130px;
-  padding:20px;
-  text-align:center;
-  text-decoration:none;
-  color:black;
-  position:fixed;
-  top:10px;
-  right:10px;
-}
 
 
-
-}
