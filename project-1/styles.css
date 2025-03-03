@@ -34,7 +34,7 @@ body{
 
   
 .backnavbar{
-  background-color: white;
+  background-color:none;
   width: auto;
   text-align: center;
   text-decoration:none;
@@ -44,7 +44,7 @@ body{
   left:10px;
 }
 .nextnavbar{
-  background-color: white;
+  background-color:none;
   width: auto;
   text-align: center;
   text-decoration:none;
