@@ -34,13 +34,25 @@ body{
 .navbar{
   .navbar {
     position:fixed;
-    top:10px;
+    bottom:10px;
     right:10px;
     width: 100px;
     height: 100px;
   }
   
 }
+.fixed-btn{
+  background-color:pink;
+  width:130px;
+  padding:20px;
+  text-align:center;
+  text-decoration:none;
+  color:black;
+  position:fixed;
+  top:10px;
+  right:10px;
+}
+
 
 
 }
