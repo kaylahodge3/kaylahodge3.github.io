@@ -33,7 +33,17 @@ body{
 
 
   
-.navbar{
+.backnavbar{
+  background-color: white;
+  width: auto;
+  text-align: center;
+  text-decoration:none;
+  color:black;
+  position:fixed;
+  bottom:10px;
+  left:10px;
+}
+.nextnavbar{
   background-color: white;
   width: auto;
   text-align: center;
