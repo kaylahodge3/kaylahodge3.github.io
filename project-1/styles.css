@@ -31,5 +31,14 @@ body{
   font-family: "custom-font";
 }
 
+.navbar{
+  .navbar {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+  }
+  
+}
+
 
 }
