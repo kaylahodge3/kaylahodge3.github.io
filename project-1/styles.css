@@ -42,6 +42,7 @@ body{
   position:fixed;
   bottom:10px;
   left:10px;
+  list-style-type: none;
 }
 .nextnavbar{
   background-color:none;
