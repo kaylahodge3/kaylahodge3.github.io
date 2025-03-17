@@ -1,14 +1,29 @@
-.title1{
-    color: white;
-     text: size 150px;
-
-    
-    }
 
     
     @font-face {
-        font-family:"custom-font";
+        font-family:"body";
         src: url("Oswald-ExtraLight.otf");format(otf)
         font-weight:normal;
         font-style:normal;
       }
+
+      @font-face {
+        font-family:"title";
+        src: url("Pencerio-Hairline.otf");format(otf)
+        font-weight:normal;
+        font-style:normal;
+      }
+    
+
+    .title{
+        color: white;
+         text: size 150px;
+    
+        
+        }
+
+        body{
+            font-family: "body";
+          }
+          
+    
