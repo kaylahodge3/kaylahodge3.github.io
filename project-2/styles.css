@@ -1,0 +1,14 @@
+.title1{
+    color: white;
+     text: size 150px;
+
+    
+    }
+
+    
+    @font-face {
+        font-family:"custom-font";
+        src: url("Oswald-ExtraLight.otf");format(otf)
+        font-weight:normal;
+        font-style:normal;
+      }
