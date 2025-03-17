@@ -19,8 +19,21 @@
         text-align: center;
         border: 3px solid pink;
         color: white;
-         text: size 150px;
-    
+        max-width: 100%;
+        transition: all 2s ease-in-out;
+
+        h1{
+          text-align: center;
+          border: 3px solid pink;
+          color: white;
+          max-width: 100%;
+        }
+    H1:hover{
+      background-color: pink;
+  width: 400px;
+  height: 400px;
+ 
+    }
         
         }
 
@@ -30,5 +43,11 @@
             border: 3px solid pink;
             color: white;
           }
+
+        body:hover{
+          width: 400px;
+  height: 400px;
+ 
+        }
           
      
