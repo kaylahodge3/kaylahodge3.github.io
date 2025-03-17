@@ -16,6 +16,8 @@
     
 
     .title{
+        text-align: center;
+        border: 3px solid pink;
         color: white;
          text: size 150px;
     
@@ -24,6 +26,9 @@
 
         body{
             font-family: "body";
+            text-align: center;
+            border: 3px solid pink;
+            color: white;
           }
           
-    
+     
