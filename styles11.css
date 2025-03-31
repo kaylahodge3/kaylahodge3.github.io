@@ -1,0 +1,65 @@
+
+@font-face {
+    font-family:"comico";
+    src: url("comico-regular.otf");format(otf)
+    font-weight:normal;
+    font-style:normal;
+  }
+  body{
+    font-family: "comico";
+  color: white;
+  }
+
+  h1{
+    font-size: 100px;
+    color: whitesmoke;
+  }
+
+  h2{
+    font-size: 50px;
+    color:whitesmoke
+  }
+    
+h1:hover{
+  color: pink;
+  filter: blur(10px);
+}
+
+h2:hover{
+  color: pink;
+  size: 55px;
+  filter: blur(10px);
+}
+
+a:link{
+  color:white;
+}
+a:visited{
+  color:white;
+}
+  
+ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul:hover{
+  filter: blur(10px);
+  color: pink; 
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 10%;
+  width: auto;
+  margin-right: 0.5%;
+  padding-left: 0;
+  margin-left: 0;
+  ax-width: 100%;
+}
+li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  ax-width: 100%;
+}
