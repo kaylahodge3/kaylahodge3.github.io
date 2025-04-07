@@ -12,7 +12,7 @@
       height: 100vh;
       margin: 0;
       background-color: lightcoral; 
-      font-family: Arial, sans-serif;
+      font-family: 'Courier New', Courier, monospace;
       flex-direction: column;
     }
 
@@ -30,7 +30,12 @@
       resize: none;
       margin-bottom: 20px;
       text-align: center;
-      color: black;
+      font-family: 'Courier New', Courier, monospace; /* Ensuring the input text is in Courier New */
+    }
+
+    #text-box::placeholder {
+      font-family: 'Courier New', Courier, monospace; /* Ensure the placeholder text uses Courier New */
+      color: gray; /* Optional: style for placeholder text color */
     }
 
     #random-word {
@@ -49,7 +54,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 20px; /* Positioned below the text box */
+      margin-top: 20px;
       display: block;
       width: 200px;
       text-align: center;
@@ -75,14 +80,12 @@
     const randomWordDiv = document.getElementById('random-word');
     const letItGoButton = document.getElementById('let-it-go-btn');
 
-    // Array of supporting words
     const supportingWords = [
       'incredible', 'amazing', 'powerful', 'unbelievable', 'spectacular', 
       'awesome', 'phenomenal', 'mind-blowing', 'stupendous', 'extraordinary',
-      'inspirational', 'unstoppable', 'tremendous', 'impressive', 'remarkable'
+      'inspirational', 'unstoppable', 'tremendous', 'impressive', 'remarkable','valid','wow','period'
     ];
 
-    // Function to get a random word from the array
     function getRandomWord() {
       const randomIndex = Math.floor(Math.random() * supportingWords.length);
       return supportingWords[randomIndex];
