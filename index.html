@@ -2,26 +2,93 @@
 <html lang="en">
 <head>
 
-    <link href="styles11.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Website</title>
+
+   <link href="styles11.css" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Class Website</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Background Image Example</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <body style="background-color:rgb(255, 131, 166);"></body>
-    <h1>Kayla's Class Site</h1>
+   <h1>Kayla's Class Site</h1>
+   
 
 
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="project-1/index.html">book</a></li>
-        <li><a href="project-2/index.html">poster</a></li>
-        <li><a href="project-3/index.html">tool</a></li>
-        <li><a href="project-4/index.html">coming soon</a></li>
-    </ul>
 
-  
 
-    
+
+   <h2>Projects</h2>
+   <ul>
+       <li><a href="project-1/index.html">book</a></li>
+
+       <li><a href="project-2/index.html">poster</a></li>
+
+       <li><a href="project-3/index.html">tool</a></li>
+
+       <li><a href="project-4/index.html">coming soon</a></li>
+       
+ 
+   </ul>
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Cursor Example</title>
+    <style>
+        /* Make the body occupy the full viewport height */
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            cursor: none; /* Hide the default cursor */
+        }
+
+        /* Style the custom circle cursor */
+        .cursor {
+            position: absolute;
+            width: 30px; /* Size of the circle */
+            height: 30px; /* Size of the circle */
+            background-color: pink; /* Circle color */
+            border-radius: 50%; /* Make it round */
+            pointer-events: none; /* Ensure it doesn't interfere with clicking */
+            transform: translate(-50%, -50%); /* Center the circle at the cursor */
+            transition: width 0.2s, height 0.2s; /* Smooth transition for resizing */
+        }
+
+        /* Optional: Change the size when hovering over clickable elements */
+        a:hover, button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <script>
+        // Create the circle cursor element
+        const cursor = document.createElement('div');
+        cursor.classList.add('cursor');
+        document.body.appendChild(cursor);
+
+        // Update the position of the custom cursor
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor.style.left = `${x}px`;
+            cursor.style.top = `${y}px`;
+        });
+    </script>
 </body>
 </html>
+
+
+
