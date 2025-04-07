@@ -1,10 +1,20 @@
 @font-face {
     font-family: "custom-font";
-    src: url("Array-Regular.otf"); format("otf")
+    src: url("Array-Bold.otf"); format("otf")
     font-weight: normal;
     font-style: normal;
+}
   
     body{
         font-family: "custom-font";
+        background-color: aliceblue;
+        text-align: center;
       }
       
+      h1{
+        color:azure
+        text-align: center;
+        font-family: "custom-font";
+        background-color: aliceblue;
+      }
+        

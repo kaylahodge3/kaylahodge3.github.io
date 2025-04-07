@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rant Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: lightcoral; 
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+    }
+
+    #rant {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    #text-box {
+      padding: 20px;
+      font-size: 24px;
+      width: 600px;
+      height: 200px;
+      resize: none;
+      margin-bottom: 20px;
+      text-align: center;
+      color: black;
+    }
+
+    #random-word {
+      font-size: 32px;
+      color: pink;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #let-it-go-btn {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: lightskyblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px; /* Positioned below the text box */
+      display: block;
+      width: 200px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #let-it-go-btn:hover {
+      background-color: #c0392b;
+    }
+
+  </style>
 </head>
 <body>
- rant 
- <input type="text" id="text-input" placeholder="rant here" output="changeText()">
+  <div>
+    <textarea id="text-box" placeholder="Rant"></textarea> <!-- "Rant" inside the box -->
+    <button id="let-it-go-btn">Let It Go</button> <!-- "Let It Go" button below the box -->
+    <div id="random-word"></div> <!-- Static random word will appear here -->
+  </div>
+
+  <script>
+    const textBox = document.getElementById('text-box');
+    const randomWordDiv = document.getElementById('random-word');
+    const letItGoButton = document.getElementById('let-it-go-btn');
+
+    // Array of supporting words
+    const supportingWords = [
+      'incredible', 'amazing', 'powerful', 'unbelievable', 'spectacular', 
+      'awesome', 'phenomenal', 'mind-blowing', 'stupendous', 'extraordinary',
+      'inspirational', 'unstoppable', 'tremendous', 'impressive', 'remarkable'
+    ];
+
+    // Function to get a random word from the array
+    function getRandomWord() {
+      const randomIndex = Math.floor(Math.random() * supportingWords.length);
+      return supportingWords[randomIndex];
+    }
+
+    // When the "Let It Go" button is clicked, clear the text box and show a random word
+    letItGoButton.addEventListener('click', function() {
+      textBox.value = ''; // Clear the text box
+      randomWordDiv.textContent = getRandomWord(); // Show a random supporting word below the button
+    });
+  </script>
 </body>
 </html>
