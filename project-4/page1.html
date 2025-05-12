@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hourly Disappearing Lines</title>
+  <title>Incense Hour Lines</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,14 +26,10 @@
     }
 
     .line {
-      width: 3px;
-      height: 100%;
-      background-color: pink;
-      transition: opacity 1s;
-    }
-
-    .hidden {
-      opacity: 0;
+      width: 4px;
+      background-color: pink ;
+      transition: height 1s linear;
+      align-self: flex-end;
     }
 
     #time {
@@ -51,38 +47,38 @@
     const container = document.getElementById("container");
     const timeDisplay = document.getElementById("time");
 
-
     const lines = [];
     for (let i = 0; i < 24; i++) {
       const line = document.createElement("div");
       line.classList.add("line");
+      line.style.height = "100%";
       container.appendChild(line);
       lines.push(line);
     }
 
-    function updateClock() {
+    function updateLines() {
       const now = new Date();
       const hour = now.getHours();
       const minute = now.getMinutes();
       const second = now.getSeconds();
+      const progress = (minute * 60 + second) / 3600; // 0 to 1
 
       timeDisplay.textContent = now.toLocaleTimeString();
 
- 
       lines.forEach((line, index) => {
         if (index < hour) {
-          line.classList.add("hidden");
+          line.style.height = "0%"; // completely burned down
+        } else if (index === hour) {
+          const remaining = 100 - (progress * 100); // gradually decreasing height
+          line.style.height = `${remaining}%`;
         } else {
-          line.classList.remove("hidden");
+          line.style.height = "100%"; // future
         }
       });
     }
 
-  
-    updateClock();
-
-    
-    setInterval(updateClock, 1000);
+    updateLines();
+    setInterval(updateLines, 1000); // every second
   </script>
 
 </body>
