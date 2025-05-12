@@ -109,3 +109,22 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.background {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(#000 5%, transparent 6%);
+  background-size: 40px 40px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out;
+  pointer-events: none;
+}
+
