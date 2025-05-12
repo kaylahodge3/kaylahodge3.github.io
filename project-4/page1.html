@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hourly Disappearing Lines</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 90%;
+      height: 80vh;
+      margin-top: 5vh;
+    }
+
+    .line {
+      width: 3px;
+      height: 100%;
+      background-color: pink;
+      transition: opacity 1s;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    #time {
+      font-size: 1.5em;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container"></div>
+  <div id="time"></div>
+
+  <script>
+    const container = document.getElementById("container");
+    const timeDisplay = document.getElementById("time");
+
+
+    const lines = [];
+    for (let i = 0; i < 24; i++) {
+      const line = document.createElement("div");
+      line.classList.add("line");
+      container.appendChild(line);
+      lines.push(line);
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      const second = now.getSeconds();
+
+      timeDisplay.textContent = now.toLocaleTimeString();
+
+ 
+      lines.forEach((line, index) => {
+        if (index < hour) {
+          line.classList.add("hidden");
+        } else {
+          line.classList.remove("hidden");
+        }
+      });
+    }
+
+  
+    updateClock();
+
+    
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
